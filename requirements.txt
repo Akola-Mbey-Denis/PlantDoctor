@@ -17,7 +17,9 @@ PySocks==1.7.1
 requests==2.27.1
 six==1.16.0
 soupsieve==2.3.2.post1
-torch==1.9.1+cpu
+-f https://download.pytorch.org/whl/torch_stable.html 
+torch==1.9.1+cpu 
+-f https://download.pytorch.org/whl/torch_stable.html
 torchvision==0.10.1+cpu
 typing_extensions==4.2.0
 urllib3==1.26.9
