@@ -16,6 +16,7 @@ def load_trained_model():
     model = models.resnet101()
     classifier = nn.Sequential(OrderedDict([('fc1', nn.Linear(2048, 512)),('relu', nn.ReLU()),('fc2', nn.Linear(512,39)),('output', nn.LogSoftmax(dim=1))]))
     model.fc =classifier
+    #Load model
     model.load_state_dict(torch.load('./plantsvillage_classifier_checkpoint.pth',map_location=torch.device(device)))
     model.eval()
     return model
